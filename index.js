@@ -13,16 +13,14 @@ function startQuiz() {
 
 function nextQuestion() {
     var radios = document.getElementsByTagName('input');
-    var unanswered = [];
+    var answer = [];
     for (let i = 0; i < radios.length; i++) {
-        if (!radios[i].checked) {
-            unanswered.push('not checked');
-        }else{
+        if (radios[i].checked) {
             userAnswers.push(radios[i].value);
+            answer.push('checked')
         }
     };
-
-    if(unanswered.length === 4){
+    if(answer.length === 0){
         let existingError = document.getElementsByClassName('error');
         for (let i = 0; i < existingError.length; i++) {
             existingError[i].remove();
@@ -41,16 +39,15 @@ function nextQuestion() {
 
 function displayResults () {
     var radios = document.getElementsByTagName('input');
-    var unanswered = [];
+    var answer = [];
     for (let i = 0; i < radios.length; i++) {
         if (radios[i].checked) {
             userAnswers.push(radios[i].value);
-        }else{
-            unanswered.push('not checked');
+            answer.push('checked')
         }
     };
 
-    if(unanswered.length === 4){
+    if(answer.length === 0){
         let existingError = document.getElementsByClassName('error');
         for (let i = 0; i < existingError.length; i++) {
             existingError[i].remove();

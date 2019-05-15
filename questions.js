@@ -1,7 +1,7 @@
 var questions = [
     {
         'title': 'Question 1',
-        'question': 'How much time do cats spend grooming themselves during the day?',
+        'question': 'How much of their day do cats spend grooming themselves?',
         'answers': {
             '3': '10%-30%',
             '4': '30%-50%',

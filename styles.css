@@ -158,7 +158,7 @@ ul{
 }
 
 button:hover{
-    background-color: black;
+    background-color: rgb(93, 93, 93);
     color: white;
     cursor: pointer;
 }
